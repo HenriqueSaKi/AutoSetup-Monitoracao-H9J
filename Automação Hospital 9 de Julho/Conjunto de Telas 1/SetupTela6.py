@@ -39,9 +39,9 @@ class SetupTela6:
         WebDriverWait(driver,20).until(EC.presence_of_element_located((By.XPATH, "//div[@role='menu']//a[2]")))
         dashboard = driver.find_element_by_xpath("//div[@role='menu']//span[contains(text(), 'Dashboard')]")
         dashboard.click()
+        WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.XPATH, "//header[@class='header--1G8Mj']//h4[@title='Consumo']")))
 
     def DashboarConsumo(self):
-        WebDriverWait(driver,20).until(EC.visibility_of_element_located((By.XPATH, "//header[@class='header--1G8Mj']//h4[@title='Consumo']")))
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//div[@class='viewPanel--1AH2Z']//div[8]//header//div[@class='toolbar--2pvXp']//button//span[@class='fa fa-download ']")))
         maxDash = driver.find_element_by_xpath("//div[@class='viewPanel--1AH2Z']//div[8]//header//div[@class='toolbar--2pvXp']//button//span[@class='fa fa-window-maximize ']")
         maxDash.click()
@@ -52,6 +52,7 @@ class SetupTela6:
     def NewTab(self):
         driver.execute_script("window.open('');")
         driver.switch_to.window(driver.window_handles[1])
+        driver.get('https://americaenergia.powerhub.io/america-energia/sites')
 
     def run(self):
         for i in range (2):
@@ -59,9 +60,9 @@ class SetupTela6:
                 self.access()
                 self.login()
                 self.dashboard()
+                time.sleep(4)
             elif i == 1:
                 self.NewTab()
-                self.access()
                 self.dashboard()
                 self.DashboarConsumo()
         driver.switch_to.default_content()
