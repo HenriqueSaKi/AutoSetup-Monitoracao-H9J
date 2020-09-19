@@ -91,29 +91,5 @@ class SetupTela2:
                 self.loginNetvMi()
                 driver.switch_to.default_content()
 
-class ScreenPosition:
-    def __init__(self):
-        pass
-
-    def EnableExtension(self):
-        pyautogui.click(x=1802, y=51, duration=0.5)  # Enable chrome extension
-
-    def MoveTo2(self):
-        self.EnableExtension()
-        pyautogui.moveTo(x=1755, y=15)  # Select windows bar near minimize button
-        pyautogui.dragTo(x=960, y=1300, duration=2.0)  # Take window until screen number 2
-        time.sleep(2)
-        driver.maximize_window()
-
-    def StartMoving(self):
-        self.MoveTo2() #Replace 2nd window
-
-    def Run(self):
-        self.StartMoving()
-        self.EnableExtension() #Enable extension 1st screen setup
-
 ST2 = SetupTela2()
-SP = ScreenPosition()
 ST2.run()
-time.sleep(2)
-SP.Run()
