@@ -155,6 +155,30 @@ class G5:
                 self.Relatorio('HL - BL A - 7SS - Hidrometro - Poço Artesiano - Transmissor de Vazão - 01','GS - BL A 7SS - Cozinha Sapore 6SS - 7')
                 self.reportPosition()
 
+                
+class ScreenPosition:
+    def __init__(self):
+        pass
+
+    def EnableExtension(self):
+        pyautogui.click(x=1802, y=51, duration=0.5)  # Enable chrome extension Screen 1
+        pyautogui.click(x=1802, y=1131, duration=0.5)  # Enable chrome extension Screen 2
+
+    def MoveTo2(self):
+        self.EnableExtension()
+        pyautogui.moveTo(x=1751, y=1095)  # Select windows bar near minimize button
+        pyautogui.dragTo(x=960, y=540, duration=2.0)  # Take window until screen number 1
+        time.sleep(2)
+        driver.maximize_window()
+
+    def StartMoving(self):
+        self.MoveTo2() #Replace 2nd window
+
+    def Run(self):
+        self.StartMoving()
+        self.EnableExtension() #Enable extension 1st screen setup
+
+
 class SetupTela1:
     def __init__(self):
         self.PB = PowerBI()
@@ -165,4 +189,7 @@ class SetupTela1:
         self.G5.run()
 
 ST1 = SetupTela1()
+SP = ScreenPosition()
 ST1.run()
+time.sleep(2)
+SP.Run()
