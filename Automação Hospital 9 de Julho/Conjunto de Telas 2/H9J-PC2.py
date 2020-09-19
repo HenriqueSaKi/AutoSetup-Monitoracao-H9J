@@ -3,9 +3,10 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-import time
+import time, pyautogui
 
 options = webdriver.ChromeOptions()
+options.add_argument('lang=pt-br')
 driver = webdriver.Chrome(ChromeDriverManager().install()) #Install chrome driver
 driver.maximize_window() #maximize window
 
@@ -33,10 +34,16 @@ class SetupPC2:
         siteSelect.click()
         HospSantaPaula = WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.XPATH,"//ul[@id='select2-sites-results']//li[contains(text(),'Hospital Santa Paula')]")))
         HospSantaPaula.click()
+        
+    def SendTo2nd(self):
+        pyautogui.moveTo(x=930,y=15,duration=1.0) #Move until a position near minimize button
+        pyautogui.dragTo(x=2040,y=540,duration=3.0) #Drag to middle of 2nd screen
+        driver.maximize_window()
 
     def run(self):
         self.login()
         self.filter()
+        self.SendTo2nd()
 
 SP = SetupPC2()
 SP.run()
