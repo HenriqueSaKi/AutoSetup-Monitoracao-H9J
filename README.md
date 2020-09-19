@@ -9,6 +9,8 @@
 ### Tópicos Abordados :scroll:
 - Introdução 
 - Pré-requisitos 
+    - Requirements.txt
+    - Arquivo .crx
 - Configurações de tela
 - Sites acessados
 - Funcionamento 
