@@ -5,13 +5,14 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from SetupTela1 import ScreenPosition
 import pyautogui
 import time
 
 options = Options()
-options.add_extension('extension_0_71_0_0.crx') #Add extension downloaded in format .crx
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=options) #Install chrome driver and apply options
-driver.maximize_window() #maximize window
+options.add_extension('extension_0_71_0_0.crx')
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+driver.maximize_window()
 action = ActionChains(driver)
 
 class SetupTela2:
@@ -29,9 +30,9 @@ class SetupTela2:
         password = driver.find_element_by_id('user_senha')
         entrar = driver.find_element_by_xpath('//button[@type="submit"]')
         login.clear()
-        login.send_keys('')  # Input a valid e-mail address
+        login.send_keys('monitoramento.h9j@gmail.com')
         password.clear()
-        password.send_keys('')  # Input you password
+        password.send_keys('h9jmic')
         entrar.click()
 
     def AccessNetvMi(self):
@@ -42,10 +43,10 @@ class SetupTela2:
 
     def loginNetvMi(self):
         login = driver.find_element_by_xpath("//input[@id='usuario']")
-        login.send_keys('')  # Input a valid e-mail address
+        login.send_keys('wm.hnove')
         time.sleep(1)
         password = driver.find_element_by_xpath("//input[@id='senha']")
-        password.send_keys('')  # Input you password
+        password.send_keys('GKyDXBE')
         time.sleep(1)
         pyautogui.press('enter')
 
@@ -56,6 +57,10 @@ class SetupTela2:
 
     def LogEventos(self):
         driver.get('https://g5.oxyn.com.br/event/log')
+        driver.find_element_by_xpath("//label[contains(text(),'Entrou')]").click()
+        driver.find_element_by_xpath("//label[contains(text(),'Saiu')]").click()
+        driver.find_element_by_xpath("//label[contains(text(),'Expirou')]").click()
+        time.sleep(2)
         driver.find_element_by_xpath("//button[contains(text(),'Buscar')]").click()
 
     def Hosp9Julho(self):
@@ -71,8 +76,10 @@ class SetupTela2:
         marcador = driver.find_element_by_xpath("//ul[@id='labels']//li[contains(text(),'Status de porta')]")
         filterBox = driver.find_element_by_id('filter')
         action.drag_and_drop(marcador, filterBox).perform()
+        time.sleep(2)
         aplicar = driver.find_element_by_xpath("//div[@class='ui-dialog-buttonset']//button[contains(text(), 'Aplicar')]")
         aplicar.click()
+        time.sleep(1)
 
     def run(self):
         for i in range(3):
@@ -85,7 +92,8 @@ class SetupTela2:
                 self.DeviationAccess()
                 self.Hosp9Julho()
                 self.Marcador()
-            else:
+            elif i == 2:
+
                 self.NewTab(i)
                 self.AccessNetvMi()
                 self.loginNetvMi()
@@ -93,3 +101,5 @@ class SetupTela2:
 
 ST2 = SetupTela2()
 ST2.run()
+SP = ScreenPosition()
+SP.EnableExtension()
