@@ -25,7 +25,7 @@ Em andamento... :construction:
 Em andamento... :construction:
 
 ### Sites acessados :link:
-- [Microsoft Online](https://login.microsoftonline.com/)
+- <a href="https://login.microsoftonline.com/" target="_blank">Microsoft Online</a>
 - [Netvmi](http://netvmi.com.br/)
 - [Oxyn G5](https://g5.oxyn.com.br/)
 - [Power BI](https://app.powerbi.com/)
