@@ -11,9 +11,9 @@ import pyautogui
 import time
 
 options = Options()
-options.add_extension('extension_0_71_0_0.crx') #Add extension downloaded in format .crx
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=options) #Install chrome driver and apply options
-driver.maximize_window() #maximize window
+options.add_extension('extension_0_71_0_0.crx')
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+driver.maximize_window()
 action = ActionChains(driver)
 
 class PowerBI:
@@ -26,13 +26,13 @@ class PowerBI:
     def loginPwBI(self):
         login = WebDriverWait(driver,20).until(EC.presence_of_element_located((By.XPATH, "//input[@type='email']")))
         login.clear()
-        login.send_keys('')  # Input a valid e-mail address
+        login.send_keys('kelvin.borges@microblau.com.br')
         time.sleep(2)
         avancar = driver.find_element_by_xpath("//input[@value='Avançar']") #Avançar
         avancar.click()
         senha = WebDriverWait(driver,20).until(EC.presence_of_element_located((By.XPATH, "//input[@name='passwd']")))
         senha.clear()
-        senha.send_keys('')  # Input you password
+        senha.send_keys('Boylcn533123')
         time.sleep(2)
         action.reset_actions()
         driver.find_element_by_xpath("//input[@value='Entrar']").click() #Entrar
@@ -74,9 +74,9 @@ class G5:
         password = driver.find_element_by_id('user_senha')
         entrar = driver.find_element_by_xpath('//button[@type="submit"]')
         login.clear()
-        login.send_keys('')  # Input a valid e-mail address
+        login.send_keys('engobras@h9j.com.br')
         password.clear()
-        password.send_keys('')  # Input you password
+        password.send_keys('engenharia')
         entrar.click()
 
     def NewTab(self, i):
@@ -138,7 +138,7 @@ class G5:
 
     def reportPosition(self):
         tab = ['4', '3']
-        time.sleep(5)
+        time.sleep(10)
         for i in range(2):
             pyautogui.moveTo(x=960, y=540)  # center of a 1920x1080 screen
             pyautogui.hotkey('ctrl', tab[i])
@@ -155,29 +155,28 @@ class G5:
                 self.Relatorio('HL - BL A - 7SS - Hidrometro - Poço Artesiano - Transmissor de Vazão - 01','GS - BL A 7SS - Cozinha Sapore 6SS - 7')
                 self.reportPosition()
 
-                
+
 class ScreenPosition:
     def __init__(self):
         pass
 
     def EnableExtension(self):
         pyautogui.click(x=1802, y=51, duration=0.5)  # Enable chrome extension Screen 1
-        pyautogui.click(x=1802, y=1131, duration=0.5)  # Enable chrome extension Screen 2
 
     def MoveTo2(self):
         self.EnableExtension()
-        pyautogui.moveTo(x=1751, y=1095)  # Select windows bar near minimize button
-        pyautogui.dragTo(x=960, y=540, duration=2.0)  # Take window until screen number 1
-        time.sleep(2)
-        driver.maximize_window()
+        pyautogui.keyDown('win')
+        for i in range (3):
+            pyautogui.press('right')
+            time.sleep(2)
+        pyautogui.press('up')
+        pyautogui.keyUp('win')
 
     def StartMoving(self):
         self.MoveTo2() #Replace 2nd window
 
     def Run(self):
         self.StartMoving()
-        self.EnableExtension() #Enable extension 1st screen setup
-
 
 class SetupTela1:
     def __init__(self):
