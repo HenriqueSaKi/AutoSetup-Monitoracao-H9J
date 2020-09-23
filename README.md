@@ -25,11 +25,11 @@ Em andamento... :construction:
 Em andamento... :construction:
 
 ### Sites acessados :link:
-- <a href="https://login.microsoftonline.com/" target="blank">Microsoft Online</a>
-- [Netvmi](http://netvmi.com.br/)
-- [Oxyn G5](https://g5.oxyn.com.br/)
-- [Power BI](https://app.powerbi.com/)
-- [Powerhub](http://site.powerhub.io/)
+- [Microsoft Online](https://login.microsoftonline.com/){:target="_blank"}
+- [Netvmi](http://netvmi.com.br/){:target="_blank"}
+- [Oxyn G5](https://g5.oxyn.com.br/){:target="_blank"}
+- [Power BI](https://app.powerbi.com/){:target="_blank"}
+- [Powerhub](http://site.powerhub.io/){:target="_blank"}
 
 ### Funcionamento :arrow_forward:
 Em andamento... :construction:
