@@ -1,4 +1,4 @@
-import pyautogui, time
+import pyautogui
 
 class ScreenPosition():
     def __init__(self):
@@ -8,30 +8,19 @@ class ScreenPosition():
         pyautogui.click(x=1802, y=51, duration=2.0)  # Enable chrome extension
 
 
-    def MoveTo4(self):
-        self.EnableExtension()
-        pyautogui.moveTo(x=1755, y=15, duration=1.0)  # Select windows bar near minimize button
-        pyautogui.dragTo(x=4800, y=540, duration=4.0)  # Take window until middle of screen number 4
-        time.sleep(2)
+    def moveUntil(self, screen):
+        if screen == 4:
+            pyautogui.moveTo(x=1755, y=15, duration=1.0)
+            pyautogui.dragTo(x=4800, y=100, duration=3.0)
 
+        if screen == 6:
+            pyautogui.moveTo(x=1755, y=15, duration=1.0)
+            pyautogui.dragTo(x=4800, y=1620, duration=3.0)
 
-    def MoveTo6(self):
-        self.EnableExtension()
-        pyautogui.moveTo(x=1755, y=15, duration=1.0)  # Select windows bar near minimize button
-        pyautogui.dragTo(x=2880, y=1085, duration=4.0)  # Take window until middle of screen number 6
-        time.sleep(2)
+        if screen == 7:
+            pyautogui.moveTo(x=1755, y=15, duration=1.0)
+            pyautogui.dragTo(x=6720, y=1620, duration=3.0)
 
-
-    def MoveTo7(self):
-        pyautogui.moveTo(x=1755, y=15, duration=1.0)  # Select windows bar near minimize button
-        pyautogui.dragTo(x=6720, y=1085, duration=4.0)  # Take window until middle of screen number 7
-        time.sleep(2)
-
-
-    def MoveTo8(self):
-        self.EnableExtension()
-        pyautogui.moveTo(x=1755, y=15, duration=1.0)  # Select windows bar near minimize button
-        pyautogui.dragTo(x=6720, y=540, duration=4.0)  # Take window until middle of screen number 8
-        time.sleep(2)
-
-
+        if screen == 8:
+            pyautogui.moveTo(x=1755, y=15, duration=1.0)
+            pyautogui.dragTo(x=6720, y=100, duration=3.0)
