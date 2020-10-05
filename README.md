@@ -15,6 +15,7 @@
 - Configurações de tela
 - Sites acessados
 - Funcionamento 
+- Dificuldades/Desafios
 
 ### Introdução :rocket:
 
@@ -60,3 +61,11 @@
 ### Funcionamento :arrow_forward:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Para que a execução das telas seja bem sucedida, o arquivo ```.crx```, deve estar contido dentro da mesma página do programa ```.exe``` criado pelo pyinstaller, pois esse arquivo será responsável por abrir o chromedriver com a extensão *Revolver Tabs* já habilitado.
+
+### Dificuldades / Desafios :muscle:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A programação por um todo, foi bem tranquila, visto que os maiores aprendizados foram adquiridos no primeiro projeto da [central BMS da Microblau](https://github.com/HenriqueSaKi/OxynG5-AUT-SCREEN). </br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No entanto, é possível citar duas dificuldades encontradas.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A primeira delas, foi no posicionamento das telas. Como nunca havia visto como eram realizados a transição de uma tela à outra, inicialmente houveram diversos retrabalhos, até que foi decidido que por motivos de produtividade, teríamos um maior ganho se eu realizasse essas configurações pessoalmente.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O segundo problema encontrado foi na programação do iframe, no site [Powerhub](http://site.powerhub.io/), onde o mesmo não estava sendo reconhecido, fazendo com que eu mudasse o xpath procurado, por um outro mais detalhado.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Os dois problemas foram corrigidos e o programa encontra-se finalizado e rodando no Hospital 9 de Julho.
