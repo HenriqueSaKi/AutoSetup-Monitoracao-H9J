@@ -17,7 +17,10 @@
 - Funcionamento 
 
 ### Introdução :rocket:
-Em andamento... :construction:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este projeto foi baseado em uma solicitação de um técnico da empresa Microblau, residente no Hospital 9 de Julho.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aparentemente, o técnico demorava cerca de 21 minutos para acessar e logar nas páginas que deveriam ser monitoradas. Por isso, a partir da minha ideia de agilizar o meu processo de configuração na [central BMS da Microblau](https://github.com/HenriqueSaKi/OxynG5-AUT-SCREEN), ele viu a oportunidade de solicitar a implementação do mesmo no Hospital 9 de Julho.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Com essa implementação, foi possível obter um ganho de 80,9% de produtividade nesse processo, ou seja, onde era gasto um tempo de 21 minutos, passou a ser 4 minutos. Sem contar com a possibilidade de realizar outras tarefas em meio à execução do programa.
 
 ### Pré-requisitos :pushpin:
 Em andamento... :construction:
@@ -31,6 +34,7 @@ Em andamento... :construction:
 - [Oxyn G5](https://g5.oxyn.com.br/)
 - [Power BI](https://app.powerbi.com/)
 - [Powerhub](http://site.powerhub.io/)
+- [Projeto - Central BMS Microblau](https://github.com/HenriqueSaKi/OxynG5-AUT-SCREEN)
 
 ### Funcionamento :arrow_forward:
 Em andamento... :construction:
