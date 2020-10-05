@@ -27,7 +27,9 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Após realizar o download dos arquivos desse projeto, será necessário editar o código, aplicando os dados de acesso (login e senha), nos campos destacados com comentários no código.</br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Após editar os campos de acesso, o arquivo já poderá ser executado normalmente. No entanto, dessa forma o computador deverá possuir o Python e suas bibliotecas instaladas.</br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Caso opte por essa primeira opção, após instalar o Python e adicioná-lo ao seu Path, execute no **prompt de comando**, o seguinte comando:</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Caso opte por essa primeira opção, após instalar o Python e adicioná-lo ao seu Path, no **prompt de comando**, acesse a pasta do arquivo e execute o seguinte comando:</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Comando para acessar a pasta: ```cd <local do arquivo>```</br>
+
 <div align= 'center'>
 
 ```pip install -r requirements.txt```
