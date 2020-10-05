@@ -45,7 +45,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Com isso, gerei um arquivo capaz de rodar em qualquer computador, mesmo não contendo nenhuma versão do Python instalada.
 
 ### Configurações de tela :wrench:
-Em andamento... :construction:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recomenda-se que as telas possuam o tamanho padrão de 1920x1080, pois assim é possível garantir que as etapas que são executadas pela biblioteca ```pyautogui```, sejam mais garantidas. (*Ex: Habilitação da extensão, posicionamento das telas*)
+
 
 ### Sites acessados :link:
 - [Microsoft Online](https://login.microsoftonline.com/)
